@@ -1,0 +1,10 @@
+{
+  "him-letters-engine.him-letters-js": "Success.",
+  "him-letters-engine.him-letters-js-failed-to-load": "Error! Failed to load.",
+  "him-letters-engine.no-him-letters-js": "Not available.",
+  "him-letters-engine.distributeLettersTabLabel": "Distribute Letters",
+  "him-letters-engine.letterTemplateTabLabel": "Letter Templates", 
+  "him-letters-engine.himSearchTemplate.placeholder": "Search",
+  "him-letters-engine.himSearchTemplate.label": "Search Templates",
+  "him-letters-engine.himAddNewTemplate.button": "Add New Template"
+}

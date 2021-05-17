@@ -1,0 +1,39 @@
+.margin-top{
+    margin-top: 30px;
+}
+.text-style{
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.align-left{
+    display: inline-block;
+ }
+ .align{
+    display: inline-block;
+ }
+ .align-right{
+     display: inline-block;
+     vertical-align: baseline; 
+     margin-left: 20pc;
+     position: absolute;
+ }
+ .test{
+    text-align: left;
+    display: table-cell;
+    width: auto;
+ }
+ .test1{
+    text-align: right;
+    display: table-cell; 
+    width: auto; 
+ }
+ .head{
+    display: table;
+    width: 100%;
+ }
+ .c{
+     position: relative;
+     width: 100%;
+}
+ 

@@ -1,0 +1,5 @@
+{
+  "him-letters-js/him-letters-js": {
+    "dependencies": ["./him-letters-js/lib/him-letters-js/index"]
+  }
+}

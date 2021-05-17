@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HimSearchTemplate Should Render HimSearchTemplate 1`] = `
+<div
+  className="margin-top"
+>
+  <Text
+    className="text-style"
+    isItalic={false}
+    isVisuallyHidden={false}
+    isWordWrapped={false}
+  >
+    him-letters-engine.himSearchTemplate.label
+  </Text>
+  <InjectIntl(SearchField)
+    placeholder="him-letters-engine.himSearchTemplate.placeholder"
+  />
+</div>
+`;

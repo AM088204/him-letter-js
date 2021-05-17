@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HimLettersPresenter Should Render HimLettersPresenter 1`] = `
+<div>
+  <Tabs
+    fill={false}
+    responsiveTo="parent"
+    tabFill={false}
+  >
+    <TabPane
+      isActive={false}
+      isDisabled={false}
+      isIconOnly={false}
+      key="DistributeLetters"
+      label="him-letters-engine.distributeLettersTabLabel"
+    >
+      <TabContentTemplate
+        label="him-letters-engine.distributeLettersTabLabel"
+      />
+    </TabPane>
+    <TabPane
+      isActive={false}
+      isDisabled={false}
+      isIconOnly={false}
+      key="LetterTemplates"
+      label="him-letters-engine.letterTemplateTabLabel"
+    >
+      <TabContentTemplate
+        label="him-letters-engine.letterTemplateTabLabel"
+      >
+        <div
+          className="align-left"
+        >
+          <InjectIntl(HimSearchTemplate) />
+        </div>
+        <div
+          className="align"
+        >
+          <InjectIntl(HimAddNewTemplateButton)
+            disclosureType="modal"
+            size="large"
+          />
+        </div>
+      </TabContentTemplate>
+    </TabPane>
+  </Tabs>
+</div>
+`;

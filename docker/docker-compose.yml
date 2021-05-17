@@ -1,0 +1,104 @@
+version: '3'
+
+services:
+  # Builds the base component container.
+  # Not runnable.
+  # `docker-compose -f ./docker/docker-compose.yml build component`
+  component:
+    build:
+      context: ../
+    image: ${IMAGE}:${TAG}
+
+  # Runs the development container.
+  # Mounts source code into the container.
+  # Starts the standalone-chrome container as well to execute tests.
+  # `docker-compose -f ./docker/docker-compose.yml up dev`
+  dev:
+    image: ${IMAGE}:${TAG}
+    command: npm run start
+    ports:
+    - 8080:8080
+    environment:
+    - CI=true
+    depends_on:
+    - standalone-chrome
+    volumes:
+    - ../src:/app/src
+    - ../tests:/app/tests
+    - ../package.json:/app/package.json
+
+  # Runs the linter, jest tests, and wdio tests locally
+  # `docker-compose -f ./docker/docker-compose.yml run --service-ports test-local`
+  test-local:
+    image: ${IMAGE}:${TAG}
+    command: npm run test:local
+    ports:
+    - "8080:8080"
+    environment:
+    - CI=true
+    depends_on:
+    - standalone-chrome
+    volumes:
+    - ../src:/app/src
+    - ../tests:/app/tests
+    - ../package.json:/app/package.json
+
+  # Runs the wdio tests locally
+  # `docker-compose -f ./docker/docker-compose.yml run --service-ports test-wdio`
+  test-wdio:
+    image: ${IMAGE}:${TAG}
+    command: npm run test:wdio
+    ports:
+    - "8080:8080"
+    environment:
+    - CI=true
+    depends_on:
+    - standalone-chrome
+    volumes:
+    - ../src:/app/src
+    - ../tests:/app/tests
+    - ../package.json:/app/package.json
+
+  # Runs the jest tests
+  # `docker-compose -f ./docker/docker-compose.yml run test-jest`
+  test-jest:
+    image: ${IMAGE}:${TAG}
+    command: npm run test:jest
+    ports:
+    - "8080:8080"
+    environment:
+    - CI=true
+    depends_on:
+    - standalone-chrome
+    volumes:
+    - ../src:/app/src
+    - ../tests:/app/tests
+    - ../package.json:/app/package.json
+
+  # Runs the linter
+  # `docker-compose -f ./docker/docker-compose.yml run test-lint`
+  test-lint:
+    image: ${IMAGE}:${TAG}
+    command: npm run test:lint
+    ports:
+    - "8080:8080"
+    environment:
+    - CI=true
+    depends_on:
+    - standalone-chrome
+    volumes:
+    - ../src:/app/src
+    - ../tests:/app/tests
+    - ../package.json:/app/package.json
+
+  # Standalone chrome selenium
+  standalone-chrome:
+    image: 'selenium/standalone-chrome:3.14.0-helium'
+    ports:
+    - '4444'
+    # Necessary due to some issues with chrome in docker.  See https://github.com/SeleniumHQ/docker-selenium#running-the-images
+    volumes:
+    - '/dev/shm:/dev/shm'
+    # Necessary to lock down screen sizes for our screen shot comparisons.
+    environment:
+      TZ: 'America/Chicago'

@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a HimLettersView that has succeeded with a valid HimLettersEngine 1`] = `
+<ContentContainer
+  fill={false}
+>
+  <Spacer
+    isInlineBlock={false}
+    marginBottom="none"
+    marginLeft="none"
+    marginRight="none"
+    marginTop="none"
+    paddingBottom="large+1"
+    paddingLeft="large+1"
+    paddingRight="large+1"
+    paddingTop="large+1"
+  >
+    <div>
+      <InjectIntl(HimLettersPresenter) />
+    </div>
+  </Spacer>
+</ContentContainer>
+`;
+
+exports[`should render a HimLettersView with no data 1`] = `
+<ContentContainer
+  fill={false}
+>
+  <Spacer
+    isInlineBlock={false}
+    marginBottom="none"
+    marginLeft="none"
+    marginRight="none"
+    marginTop="none"
+    paddingBottom="large+1"
+    paddingLeft="large+1"
+    paddingRight="large+1"
+    paddingTop="large+1"
+  >
+    <div>
+      <InjectIntl(HimLettersPresenter) />
+    </div>
+  </Spacer>
+</ContentContainer>
+`;

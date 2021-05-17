@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`himAddOrEditWindow Should Render himAddOrEditWindow Button 1`] = `
+<div>
+  <DisclosureManagerHeaderAdapter
+    collapsibleMenuView={<InjectIntl(CollapsibleMenuView) />}
+  />
+  <div
+    className="margin-top"
+  >
+    <Tabs
+      fill={false}
+      responsiveTo="parent"
+      tabFill={false}
+    >
+      <TabPane
+        isActive={false}
+        isDisabled={false}
+        isIconOnly={false}
+        key="Properties"
+        label="Properties"
+      />
+      <TabPane
+        isActive={false}
+        isDisabled={false}
+        isIconOnly={false}
+        key="Print Template"
+        label="Print Template"
+      />
+      <TabPane
+        isActive={false}
+        isDisabled={false}
+        isIconOnly={false}
+        key="Email Template"
+        label="Email Template"
+      />
+    </Tabs>
+  </div>
+</div>
+`;

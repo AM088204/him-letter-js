@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HimAddNewTemplate Should Render HimAddNewTemplate Button 1`] = `
+<div>
+  <ModalManager>
+    <Button
+      icon={
+        <IconAdd
+          data-name="Layer 1"
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      }
+      isBlock={false}
+      isCompact={false}
+      isDisabled={false}
+      isIconOnly={false}
+      isReversed={false}
+      onClick={[Function]}
+      text="him-letters-engine.himAddNewTemplate.button"
+      type="button"
+      variant="emphasis"
+    />
+  </ModalManager>
+</div>
+`;
